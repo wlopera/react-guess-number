@@ -11,7 +11,7 @@ const PrimaryButton = ({ children }) => {
       <Pressable
         style={({ pressed }) =>
           pressed
-            ? [styles.pressed, styles.buttonInnerContainer]
+            ? [styles.buttonInnerContainer, styles.presse]
             : styles.buttonInnerContainer
         }
         onPress={pressHandler}
