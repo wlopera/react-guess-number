@@ -3,7 +3,7 @@ import React from "react";
 
 import Colors from "../../constants/colors";
 
-const PrimaryButton = ({ children, onPress }) => {
+const PrimaryButton = ({ children, onPress, buttonText }) => {
   return (
     <View style={styles.buttonOuterContainer}>
       <Pressable
@@ -15,7 +15,7 @@ const PrimaryButton = ({ children, onPress }) => {
         onPress={onPress}
         android_ripple={{ color: Colors.primary600 }}
       >
-        <Text style={styles.buttonText}>{children}</Text>
+        <Text style={[styles.buttonText, buttonText]}>{children}</Text>
       </Pressable>
     </View>
   );

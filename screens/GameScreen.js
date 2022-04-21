@@ -7,6 +7,8 @@ import NumberContainer from "../components/game/NumberContainer";
 import PrimaryButton from "../components/ui/PrimaryButton";
 import InstructionText from "../components/ui/InstructionText";
 
+import { Ionicons } from "@expo/vector-icons";
+
 import Colors from "../constants/colors";
 
 const generateRandomBetween = (min, max, exclude) => {
@@ -19,8 +21,8 @@ const generateRandomBetween = (min, max, exclude) => {
   }
 };
 
-let minBoundary = 1;
-let maxBoundary = 100;
+let minBoundary;
+let maxBoundary;
 
 const GameScreen = ({ userNumber, onGameOver }) => {
   const initialGuess = generateRandomBetween(1, 100, userNumber);
@@ -33,6 +35,11 @@ const GameScreen = ({ userNumber, onGameOver }) => {
       onGameOver();
     }
   }, [currentGuess, userNumber, onGameOver]);
+
+  useEffect(() => {
+    minBoundary = 1;
+    maxBoundary = 100;
+  }, []);
 
   // direction => 'lower;  o 'greater'
   const nextGuessHandler = (direction) => {
@@ -67,17 +74,17 @@ const GameScreen = ({ userNumber, onGameOver }) => {
       <NumberContainer>{currentGuess}</NumberContainer>
       <Card>
         <InstructionText style={styles.instructionText}>
-          Mayor o menor?
+          ¿Mayor o menor?
         </InstructionText>
         <View style={styles.buttonsContainer}>
           <View style={styles.buttonContainer}>
             <PrimaryButton onPress={nextGuessHandler.bind(this, "lower")}>
-              -
+              <Ionicons name="md-remove" size={24} color="white" />
             </PrimaryButton>
           </View>
           <View style={styles.buttonContainer}>
             <PrimaryButton onPress={() => nextGuessHandler("greater")}>
-              +
+              <Ionicons name="md-add" size={24} color="white" />
             </PrimaryButton>
           </View>
         </View>
