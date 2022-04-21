@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Alert, StyleSheet, Text, View } from "react-native";
+import Card from "../components/ui/Card";
 
 import Title from "../components/ui/Title";
 import NumberContainer from "../components/game/NumberContainer";
 import PrimaryButton from "../components/ui/PrimaryButton";
+import InstructionText from "../components/ui/InstructionText";
 
 import Colors from "../constants/colors";
 
@@ -20,14 +22,17 @@ const generateRandomBetween = (min, max, exclude) => {
 let minBoundary = 1;
 let maxBoundary = 100;
 
-const GameScreen = ({ userNumber }) => {
-  const initialGuess = generateRandomBetween(
-    minBoundary,
-    maxBoundary,
-    userNumber
-  );
+const GameScreen = ({ userNumber, onGameOver }) => {
+  const initialGuess = generateRandomBetween(1, 100, userNumber);
 
   const [currentGuess, setCurrentGuess] = useState(initialGuess);
+
+  console.log("numero1: ", currentGuess, userNumber, initialGuess);
+  useEffect(() => {
+    if (currentGuess === userNumber) {
+      onGameOver();
+    }
+  }, [currentGuess, userNumber, onGameOver]);
 
   // direction => 'lower;  o 'greater'
   const nextGuessHandler = (direction) => {
@@ -40,7 +45,6 @@ const GameScreen = ({ userNumber }) => {
       ]);
       return;
     }
-    console.log(minBoundary, maxBoundary);
 
     if (direction === "lower") {
       maxBoundary = currentGuess;
@@ -52,24 +56,32 @@ const GameScreen = ({ userNumber }) => {
       maxBoundary,
       currentGuess
     );
+
+    console.log("numero2: ", newRndNumber, userNumber, initialGuess);
     setCurrentGuess(newRndNumber);
   };
 
   return (
     <View style={styles.screen}>
-      <Title styleTitle={styles.title}>Valor del Oponente</Title>
+      <Title style={styles.title}>Valor del Oponente</Title>
       <NumberContainer>{currentGuess}</NumberContainer>
-      <View>
-        <Text>Mayor o menor?</Text>
+      <Card>
+        <InstructionText style={styles.instructionText}>
+          Mayor o menor?
+        </InstructionText>
         <View style={styles.buttonsContainer}>
-          <PrimaryButton onPress={nextGuessHandler.bind(this, "lower")}>
-            -
-          </PrimaryButton>
-          <PrimaryButton onPress={() => nextGuessHandler("greater")}>
-            +
-          </PrimaryButton>
+          <View style={styles.buttonContainer}>
+            <PrimaryButton onPress={nextGuessHandler.bind(this, "lower")}>
+              -
+            </PrimaryButton>
+          </View>
+          <View style={styles.buttonContainer}>
+            <PrimaryButton onPress={() => nextGuessHandler("greater")}>
+              +
+            </PrimaryButton>
+          </View>
         </View>
-      </View>
+      </Card>
       <View>{/* Lista de intentos */}</View>
     </View>
   );
@@ -89,8 +101,15 @@ const styles = StyleSheet.create({
     borderColor: Colors.primary850,
   },
 
+  instructionText: {
+    marginBottom: 12,
+  },
+
   buttonsContainer: {
     flexDirection: "row",
-    justifyContent: "center",
+  },
+
+  buttonContainer: {
+    flex: 1,
   },
 });
