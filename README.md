@@ -15,4 +15,6 @@ React  Native: Encontrar un número aleatorio.
 ![Captura](https://user-images.githubusercontent.com/7141537/164542053-fa5527d0-6055-4a9b-a284-858f3df2ff6c.PNG)
 ![Captura1](https://user-images.githubusercontent.com/7141537/164542051-a58e9947-e6cc-4945-8da2-95925b04f552.PNG)
 
+## Resultado del juego 
+![Captura](https://user-images.githubusercontent.com/7141537/164560134-bb05baff-d7dc-45de-8057-e4078815a8ac.PNG)
 
