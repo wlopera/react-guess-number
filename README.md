@@ -32,3 +32,14 @@ React  Native: Encontrar un número aleatorio.
 ## Ajustar dimensiones para dos celulares diferentes - después
 ![Captura2](https://user-images.githubusercontent.com/7141537/164769166-8632307d-3e0d-4f94-b16e-ac60da900bbe.PNG)
 
+## Ajustar imágenes - dimensiones para dos celulares diferentes - antes
+![Captura](https://user-images.githubusercontent.com/7141537/164771169-fcd20db7-b738-414f-976f-0ec4a021478f.PNG)
+
+## Ajustes imágenes -Dimensions
+![Captura2](https://user-images.githubusercontent.com/7141537/164771167-beef0220-830a-4fb7-bbac-9522036073ab.PNG)
+
+## Ajustar imágenes - dimensiones para dos celulares diferentes - después
+![Captura3](https://user-images.githubusercontent.com/7141537/164771165-3da17822-0afd-41d3-abd1-fb9182337f1d.PNG)
+
+
+
