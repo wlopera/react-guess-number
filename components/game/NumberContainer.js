@@ -24,8 +24,8 @@ const styles = StyleSheet.create({
     borderWidth: 4,
     borderColor: Colors.accent500,
     borderRadius: 8,
-    margin: deviceWidth < 380 ? 12 : 24,
-    padding: deviceWidth < 380 ? 12 : 24,
+    margin: deviceWidth < 380 ? 14 : 28,
+    padding: deviceWidth < 380 ? 14 : 28,
   },
 
   numberText: {
