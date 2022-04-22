@@ -22,3 +22,10 @@ React  Native: Encontrar un número aleatorio.
 ![Captura](https://user-images.githubusercontent.com/7141537/164754169-d312a6fa-9267-4864-ab46-08deb1bbb8de.PNG)
 ![Captura1](https://user-images.githubusercontent.com/7141537/164754161-670eea99-3fce-4259-982b-6b51cd8f9a62.PNG)
 ![Captura2](https://user-images.githubusercontent.com/7141537/164754168-81b67907-aac5-42ba-8b7b-5eb1a1ab4e41.PNG)
+
+## Ajustar dimensiones para dos celulares diferentes - antes
+![Captura](https://user-images.githubusercontent.com/7141537/164768889-38892dd4-5789-4b1d-9eb9-051e17f69349.PNG)
+
+## Ajustar dimensiones para dos celulares diferentes - después
+![Captura2](https://user-images.githubusercontent.com/7141537/164769166-8632307d-3e0d-4f94-b16e-ac60da900bbe.PNG)
+
