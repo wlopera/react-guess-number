@@ -1,11 +1,27 @@
-import { StyleSheet, Text, View, Dimensions } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Dimensions,
+  useWindowDimensions,
+} from "react-native";
 import React from "react";
 
 import Colors from "../../constants/colors";
 
 const NumberContainer = ({ children }) => {
+  const { width, height } = useWindowDimensions();
+
+  let sizeChange = 380 ? 14 : 28;
+
+  if (width > 500) {
+    sizeChange = 6;
+  }
+
   return (
-    <View style={styles.container}>
+    <View
+      style={[styles.container, { margin: sizeChange, padding: sizeChange }]}
+    >
       <Text style={styles.numberText}>{children}</Text>
     </View>
   );
