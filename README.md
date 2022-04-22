@@ -50,4 +50,12 @@ React  Native: Encontrar un número aleatorio.
 ## Ajustar orientación del celular - antes - después
 ![Captura2](https://user-images.githubusercontent.com/7141537/164772838-d2fa4a8c-7074-4364-9c1d-49565457a17e.PNG)
 
+## Luego de los ajustes por orientación vertical/horizontal
+![Captura](https://user-images.githubusercontent.com/7141537/164817019-b47da4ee-e450-48fa-8329-9dd78c1cd5a6.PNG)
+![Captura2](https://user-images.githubusercontent.com/7141537/164817021-03714fb3-c658-40fb-9dff-690a3259c11f.PNG)
+![Captura3](https://user-images.githubusercontent.com/7141537/164817022-151f8e21-b3b5-4b1b-8429-257fb1aa481f.PNG)
+
+
+
+
 
