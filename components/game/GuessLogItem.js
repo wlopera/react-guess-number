@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Dimensions } from "react-native";
 import React from "react";
 
 import Colors from "../../constants/colors";
@@ -14,13 +14,15 @@ const GuessLogItem = ({ roundNumber, guess }) => {
 
 export default GuessLogItem;
 
+const deviceWidth = Dimensions.get("window").width;
+
 const styles = StyleSheet.create({
   listItem: {
     borderColor: Colors.primary800,
     borderWidth: 1,
     borderRadius: 40,
-    padding: 12,
-    marginVertical: 8,
+    padding: deviceWidth < 380 ? 6 : 12,
+    marginVertical: deviceWidth < 380 ? 4 : 8,
     backgroundColor: Colors.accent500,
     flexDirection: "row",
     justifyContent: "space-between",
