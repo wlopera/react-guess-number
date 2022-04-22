@@ -1,51 +1,90 @@
-import { Image, StyleSheet, Text, View, Dimensions } from "react-native";
+import {
+  Image,
+  StyleSheet,
+  Text,
+  View,
+  Dimensions,
+  useWindowDimensions,
+  ScrollView,
+} from "react-native";
 import React from "react";
 import Colors from "../constants/colors";
 import Title from "../components/ui/Title";
 import PrimaryButton from "../components/ui/PrimaryButton";
 
 const GameOverScreen = ({ roundsNumber, userNumber, onStartNewGame }) => {
+  const { width, height } = useWindowDimensions();
+
+  let imageSize = 300;
+  let marginSize = 380 ? 18 : 36;
+  let fontSizeChange = 24;
+
+  if (width < 380) {
+    imageSize = 150;
+  }
+
+  if (height < 600) {
+    imageSize = 80;
+    fontSizeChange = 18;
+  }
+
+  const imageStyle = {
+    width: imageSize,
+    height: imageSize,
+    borderRadius: imageSize / 2,
+    margin: marginSize / 10,
+  };
+
   return (
-    <View style={styles.rootContainer}>
-      <Title>Juego Terminado!</Title>
-      <View style={styles.imageContainer}>
-        <Image
-          style={styles.image}
-          source={require("../assets/images/success.png")}
-        />
+    <ScrollView style={styles.screen}>
+      <View style={styles.rootContainer}>
+        <Title>Juego Terminado!</Title>
+        <View style={[styles.imageContainer, imageStyle]}>
+          <Image
+            style={styles.image}
+            source={require("../assets/images/success.png")}
+          />
+        </View>
+        <Text
+          style={[
+            styles.summaryText,
+            { fontSize: fontSizeChange, marginBottom: fontSizeChange },
+          ]}
+        >
+          Tu teléfono necesitó{" "}
+          <Text style={styles.highlight}>{roundsNumber}</Text> rondas para
+          adivinar el número <Text style={styles.highlight}>{userNumber}</Text>.
+        </Text>
+        <PrimaryButton buttonText={styles.buttonText} onPress={onStartNewGame}>
+          Nuevo juego
+        </PrimaryButton>
       </View>
-      <Text style={styles.summaryText}>
-        Tu teléfono necesitó{" "}
-        <Text style={styles.highlight}>{roundsNumber}</Text> rondas para
-        adivinar el número <Text style={styles.highlight}>{userNumber}</Text>.
-      </Text>
-      <PrimaryButton buttonText={styles.buttonText} onPress={onStartNewGame}>
-        Nuevo juego
-      </PrimaryButton>
-    </View>
+    </ScrollView>
   );
 };
 
 export default GameOverScreen;
 
-const deviceWidth = Dimensions.get("window").width;
+// const deviceWidth = Dimensions.get("window").width;
 
 const styles = StyleSheet.create({
+  screen: { flex: 1 },
+
   rootContainer: {
-    marginTop: 100,
+    marginTop: 40,
     padding: 24,
     justifyContent: "center",
     alignItems: "center",
   },
 
   imageContainer: {
-    width: deviceWidth < 380 ? 150 : 300,
-    height: deviceWidth < 380 ? 150 : 300,
-    borderRadius: deviceWidth < 380 ? 75 : 150,
+    // width: deviceWidth < 380 ? 150 : 300,
+    // height: deviceWidth < 380 ? 150 : 300,
+    // borderRadius: deviceWidth < 380 ? 75 : 150,
     borderWidth: 3,
     borderColor: Colors.primary800,
     overflow: "hidden",
-    margin: deviceWidth < 380 ? 18 : 36,
+    // margin: deviceWidth < 380 ? 18 : 36,
   },
 
   image: {

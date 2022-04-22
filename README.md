@@ -42,13 +42,21 @@ React  Native: Encontrar un número aleatorio.
 ## Ajustar imágenes - dimensiones para dos celulares diferentes - después
 ![Captura3](https://user-images.githubusercontent.com/7141537/164771165-3da17822-0afd-41d3-abd1-fb9182337f1d.PNG)
 
-## Ajustar horientación del celular - antes
+## Ajustar orientación del celular - antes
 ![Captura](https://user-images.githubusercontent.com/7141537/164772843-ad53f330-2847-4a70-aa76-fc2b45c9ddb9.PNG)
 
 ## Ajustes app.json
 ![Captura1](https://user-images.githubusercontent.com/7141537/164772842-5d9334c8-ce6f-4d9e-88c0-8dab98810de3.PNG)
 
-## Ajustar horientación del celular - antes - después
+## Ajustar orientación del celular - antes - después
 ![Captura2](https://user-images.githubusercontent.com/7141537/164772838-d2fa4a8c-7074-4364-9c1d-49565457a17e.PNG)
+
+## Luego de los ajustes por orientación vertical/horizontal
+![Captura](https://user-images.githubusercontent.com/7141537/164817019-b47da4ee-e450-48fa-8329-9dd78c1cd5a6.PNG)
+![Captura2](https://user-images.githubusercontent.com/7141537/164817021-03714fb3-c658-40fb-9dff-690a3259c11f.PNG)
+![Captura3](https://user-images.githubusercontent.com/7141537/164817022-151f8e21-b3b5-4b1b-8429-257fb1aa481f.PNG)
+
+
+
 
 
