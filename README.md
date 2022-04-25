@@ -36,6 +36,7 @@ React  Native: Encontrar un número aleatorio.
 ![Captura](https://user-images.githubusercontent.com/7141537/164771169-fcd20db7-b738-414f-976f-0ec4a021478f.PNG)
 
 ## Ajustes imágenes -Dimensions
+ * ### No usar Porcentaje (ex: '50%') sino Dimensiones
 ![Captura2](https://user-images.githubusercontent.com/7141537/164771167-beef0220-830a-4fb7-bbac-9522036073ab.PNG)
 
 ## Ajustar imágenes - dimensiones para dos celulares diferentes - después
